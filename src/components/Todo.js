@@ -34,11 +34,16 @@ function Todo() {
     putItems(newItems)
   }
   
+  const addTodoItemHandler = (newTodo) => {
+    putItems([...items, { key: getKey(), text: newTodo, done: false}])
+  }
+  
   return (
     <div className="panel">
       <div className="panel-heading">
         ITSS ToDoアプリ
       </div>
+      <Input onAddItem={addTodoItemHandler}/>
       {items.map(item => (
         <TodoItem 
           key={item.key} 
