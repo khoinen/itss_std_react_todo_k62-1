@@ -21,7 +21,7 @@ function Input({ onAddItem }) {
       <input
         className="input"
         type="text"
-        placeholder="Enter to add"
+        placeholder="新しタスク"
         value={newTodo}
         onChange={(enter) => setNewTodo(enter.target.value)}
         onKeyDown={enterHandler}
